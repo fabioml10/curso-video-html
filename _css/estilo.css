@@ -12,6 +12,16 @@ body {
   background-color: white;
   color: rgba(0, 0, 0, 1);
   background-color: #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #606060;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header#cabecalho img#icone {
@@ -90,6 +100,105 @@ nav#menu a:hover {
   color: white;
 }
 
+section#corpo {
+  display: block;
+  width: 60%;
+  float: left;
+  border-right: 1px solid #606060;
+  padding-right: 15px;
+}
+
+article#noticia-1 h2 {
+  font-size: 12pt;
+  color: #606060;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+article header h1 {
+  font-family: 'FonteLogo', sans-serif;
+  font-size: 20pt;
+  color: #606060;
+}
+
+article header h2 {
+  font-size: 13pt;
+  color: #cecece;
+}
+
+article header h3 {
+  font-size: 20pt;
+  color: #606060;
+}
+
+table#tabela-spec {
+  border: 1px solid #606060;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table#tabela-spec caption {
+  color: #888;
+  font-size: 13pt;
+  font-weight: bolder;
+}
+
+table#tabela-spec caption span {
+  display: block;
+  float: right;
+  font-size: 8pt;
+  margin-top: 5px;
+}
+
+table#tabela-spec td {
+  border: 1px solid #606060;
+  padding: 10px;
+}
+
+table#tabela-spec td.cabecalho-tabela{
+  background-color: #606060;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+table#tabela-spec td:last-child {
+  background-color: #ddd;
+}
+
+aside#lateral {
+  display: block;
+  width: 40%;
+  float: right;
+  padding: 15px;
+  background-color: #ddd;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+aside#lateral h1 {
+  font-family: 'FontLogo', sans-serif;
+  font-size: 20pt;
+  color: #606060;
+}
+
+aside#lateral h2 {
+  font-size: 12pt;
+  color: #fff;
+  background-color: #606060;
+  padding: 15px;
+}
+
+footer#rodape {
+  clear: both;
+  border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+  text-align: center;
+}
+
 p {
   text-align: justify;
   text-indent: 50px;
@@ -120,4 +229,8 @@ figure.foto-legenda figcaption {
 
 figure.foto-legenda:hover figcaption {
   opacity: 1;
+}
+
+.direita {
+  text-align: right;
 }
