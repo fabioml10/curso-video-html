@@ -1,47 +1,126 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+  <link rel="stylesheet" type="text/css" href="./_css/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="./_css/form.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <title>Google Glass</title>
+</head>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<body>
+  <div id="interface">
+    <header id="cabecalho">
+      <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+      </hgroup>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+      <img id="icone" src="./_imagens/glass-oculos-preto-peq.png" alt="Google Glass" />
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+      <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+          <li onmouseover="mudarFoto('home')" onmouseout="mudarFoto('contato')"><a href="index.html">Home</a></li>
+          <li onmouseover="mudarFoto('especificacoes')" onmouseout="mudarFoto('contato')"><a
+              href="specs.html">Especificações</a></li>
+          <li onmouseover="mudarFoto('fotos')" onmouseout="mudarFoto('contato')"><a href="fotos.html">Fotos</a></li>
+          <li onmouseover="mudarFoto('multimidia')" onmouseout="mudarFoto('contato')"><a
+              href="multimidia.html">Multimídia</a></li>
+          <li onmouseover="mudarFoto('contato')" onmouseout="mudarFoto('contato')"><a href="fale-conosco.html">Fale
+              conosco</a></li>
+        </ul>
+      </nav>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+    </header>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <header>
+      <hgroup>
+        <h3>Tecnologia > Contato</h3>
+        <h1>Formulário de Contato</h1>
+        <h2>por Gustavo Guanabara</h2>
+        <h3 class="direita">Atualizado em 23/Abril/2013</h3>
+      </hgroup>
+    </header>
+
+    <form action="mailto:fabioml10@gmail.com" method="POST" id="contato">
+      <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" size="20" maxlength="30" placeholder="Nome Completo">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" size="20" maxlength="8" placeholder="Senha">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" size="20" maxlength="30" placeholder="E-mail">
+
+        <fieldset id="usuario">
+          <legend>Sexo</legend>
+          <input type="radio" name="genero" id="gMasculino">
+          <label for="gMasculino">Masculino</label>
+          <input type="radio" name="genero" id="gFeminino">
+          <label for="gFeminino">Feminino</label>
+        </fieldset>
+
+        <label for="data-nasc">Data de Nascimento:</label>
+        <input type="date" name="data-nasc" id="data-nasc" size="20" placeholder="dd/mm/aaa">
+      </fieldset>
+
+      <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" name="logradouro" id="logradouro" size="20" maxlength="30" placeholder="Rua, travessa, avenida, etc">
+
+        <label for="numero">Número:</label>
+        <input type="number" name="numero" id="numero" size="20" min="1" max="99999" maxlength="30" placeholder="Número">
+
+        <label for="uf">Estado:</label>
+        <input type="text" name="uf" id="uf" size="20" maxlength="30" placeholder="Estado">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Nome Completo">
+
+      </fieldset>
+
+      <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+        
+        Grau de Urgência:
+        Mensagem:
+      </fieldset>
+
+      <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+        Gostaria de adquirir um Google Glass quando disponível
+        Cor:
+        Quantidade:
+        Preço Total: R$
+      </fieldset>
+
+      <input type="submit" value="Enviar">
 
 
-[BOTÃO ENVIAR]
+      [BOTÃO ENVIAR]
+    </form>
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+
+
+    <footer id=rodape>
+
+      <p>Copyright&copy; 2013 - by Gustavo Guanabara</p>
+      <p><a href="https://www.facebook.com" target="_blank">Facebook</a> | <a href="http://www.twitter.com"
+          target="_blank">Twitter</a></p>
+
+    </footer>
+  </div>
+
+  <script src="./_javascript/funcoes.js"></script>
+</body>
+
+</html>
