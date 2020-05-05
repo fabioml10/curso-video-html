@@ -46,7 +46,7 @@
       </hgroup>
     </header>
 
-    <form action="mailto:fabioml10@gmail.com" method="POST" id="contato">
+    <form action="mailto:fabioml10@gmail.com" method="POST" id="contato" oninput="calcTotal()">
       <fieldset id="usuario">
         <legend>Identificação do Usuário</legend>
 
@@ -80,33 +80,57 @@
         <label for="numero">Número:</label>
         <input type="number" name="numero" id="numero" size="20" min="1" max="99999" maxlength="30" placeholder="Número">
 
-        <label for="uf">Estado:</label>
-        <input type="text" name="uf" id="uf" size="20" maxlength="30" placeholder="Estado">
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+          <optgroup label="Região Sudeste">
+            <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
+            <option value="mg">Mias Gerais</option>
+          </optgroup>
+          <optgroup label="Região Sul">
+            <option value="pr">Paraná</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="rs">Rio Grande do Sul</option>
+          </optgroup>
+        </select>
 
         <label for="cidade">Cidade:</label>
-        <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Nome Completo">
+        <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Cidade" list="cidades">
+        <datalist id="cidades">
+          <option value="Rio de Janeiro"></option>
+          <option value="Niterói"></option>
+          <option value="Nova Iguaçú"></option>
+        </datalist>
 
       </fieldset>
 
       <fieldset id="mensagem">
         <legend>Mensagem do Usuário</legend>
+        <label for="urgencia">Grau de Urgência:</label>
+        <input type="range" name="urgencia" id="urgencia" min="0" max="10" step="1">
         
-        Grau de Urgência:
-        Mensagem:
+        <label for="msg">Mensagem:</label>
+        <textarea name="msg" id="msg" cols="20" rows="10" placeholder="Mensagem"></textarea>
       </fieldset>
 
       <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-        Gostaria de adquirir um Google Glass quando disponível
-        Cor:
-        Quantidade:
-        Preço Total: R$
+        <input type="checkbox" name="disponivel" id="disponivel">Gostaria de adquirir um Google Glass quando disponível
+        <label for="disponivel"></label>
+
+        <label for="cor">Cor:</label>
+        <input type="color" name="cor" id="cor" value="#fff">
+        
+        <label for="qtd">Quantidade:</label>
+        <input type="number" name="qtd" id="qtd" size="20" min="0" max="10" maxlength="30" placeholder="Quantidade">
+
+        <label for="total">Preço Total: R$</label>
+        <input type="text" name="total" id="total" size="20" maxlength="30" readonly>
+        
       </fieldset>
 
-      <input type="submit" value="Enviar">
-
-
-      [BOTÃO ENVIAR]
+      <!-- <input type="submit" value="Enviar"> -->
+      <input type="image" src="_imagens/botao-enviar.png" alt="Botão enviar" name="enviar">
     </form>
 
 
